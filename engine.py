@@ -1,15 +1,14 @@
-import importlib, sys
+import sys, importlib, multiprocessing, os, socket
 
-sys.path = ["A"]
+args = sys.argv
+del sys
 
-modA = importlib.import_module("module")
+modA = importlib.import_module(args[1] +  ".module")
 fA = modA.F()
-fA.act()
+#fA.act()
 
-sys.path = ["B"]
+#modB = importlib.reload(modA)
+#fB = modB.F()
+#fB.act()
 
-modB = importlib.reload(modA)
-fB = modB.F()
-fB.act()
-
-fA.act()
+#fA.act()

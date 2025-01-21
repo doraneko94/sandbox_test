@@ -1,8 +1,6 @@
-import importlib, sys
-
-sys.path = ["../A"]
-mod = importlib.import_module("module")
-
-class F(mod.F):
+class F:
     def __init__(self):
-        super().__init__
+        pass
+
+    def act(self):
+        print("B")

@@ -3,7 +3,9 @@ class F:
         pass
 
     def act(self):
-        with open("./password.txt", "r") as f:
+        with open("test.txt", "r") as f:
             mes = f.read()
+        #import os
+        #mes = os.listdir(".")
         print(mes)
         
